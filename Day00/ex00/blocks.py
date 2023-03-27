@@ -1,7 +1,7 @@
 import sys
 
 
-def check():
+def check() -> None:
 	if len(sys.argv) == 2 and sys.argv[1].isdigit():
 		return 1
 	else:
@@ -10,11 +10,11 @@ def check():
 
 def main():
 	if check():
-		string = int(sys.argv[1])
+		string: int = int(sys.argv[1])
 		if string >= 10:
 			string = 10
 		for _ in range(string):
-			line = input()
+			line: str = input()
 			if len(line) == 32 and line.startswith('00000') and line[5] != '0':
 				print(line)
 

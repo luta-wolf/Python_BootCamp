@@ -5,13 +5,13 @@ template = [
 ]
 
 
-def check_line(line: str):
+def check_line(line: str) -> None:
     if len(line) != 5:
         print('Error')
         quit()
 
 
-def check_template(lines: []) -> bool:
+def check_template(lines: list) -> bool:
     global template
     for i in range(len(template)):
         for j in range(len(template[i])):

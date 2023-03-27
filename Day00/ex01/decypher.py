@@ -2,8 +2,8 @@ import sys
 
 
 def main():
-    line = sys.argv[1]
-    line = line.split()
+    line: str = sys.argv[1]
+    line: list = line.split()
     for i in line:
         print(i[0], end="")
     print()
