@@ -1,7 +1,8 @@
 # Python Boot camp
+A 14-day long intensive course covering topics from Python Core
 
 
-Day00 -
+Day 00 - Python Bootcamp
 
 Day01 -
 
@@ -23,4 +24,4 @@ Day09 -
 
 Team00 -
 
-Team01 - 
+Team01 -
