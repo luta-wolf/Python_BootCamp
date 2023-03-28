@@ -2,9 +2,9 @@
 A 14-day long intensive course covering topics from Python Core
 
 
-Day 00 - Python Bootcamp
+Day 00 - Loops, Sys. Passing parameters via arguments
 
-Day01 -
+Day01 - Dictionaries and Decorators
 
 Day02 -
 
