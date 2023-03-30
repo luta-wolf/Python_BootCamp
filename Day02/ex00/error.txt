@@ -1,0 +1,5 @@
+AssertionError: len(key) == 1337
+AssertionError: key[404] == 3
+AssertionError: key > 9000
+AssertionError: key.passphrase == "zax2rulez"
+AssertionError: str(key) == "GeneralTsoKeycard"

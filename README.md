@@ -6,7 +6,7 @@ Day 00 - Loops, Sys. Passing parameters via arguments
 
 Day01 - Dictionaries and Decorators
 
-Day02 -
+Day02 - Class, dunder methods
 
 Day03 -
 
