@@ -6,7 +6,7 @@ def main():
     print(key.passphrase)
     print(key.__str__())
     print(key.__len__())
-    print(key > 9001)
+    print(key > 9000)
     print(key[404])
     return key
 
@@ -33,7 +33,7 @@ def test_len(key):
 
 
 def test_gt(key):
-    if key > 9001:
+    if key > 9000:
         print('Test gt Ok')
     else:
         print('Test gt Fail')

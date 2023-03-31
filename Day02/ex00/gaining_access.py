@@ -13,4 +13,4 @@ class Key:
         return 3
 
     def __gt__(self, other):
-        return True if other > 9000 else False
+        return True if other <= 9000 else False
