@@ -8,7 +8,7 @@ Day01 - Dictionaries and Decorators
 
 Day02 - Class, dunder methods
 
-Day03 -
+Day03 - BeautifulSoup
 
 Day04 -
 

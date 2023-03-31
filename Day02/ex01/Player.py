@@ -63,3 +63,13 @@ class Detective(Player):
         elif len(self.history) >= 4 and "Cheater" not in self.history[:4]:
             self.behaviour = "Cheater"
 
+
+# import random
+
+# class Random(Player):
+#     def __init__(self):
+#         super().__init__(name="Random", behaviour="Cooperator")
+#         self.behaviour = random.choice(["Cooperator", "Cheater"])
+
+#     def change_behaviour(self, opponent_behaviour):
+#         self.behaviour = random.choice(["Cooperator", "Cheater"])
