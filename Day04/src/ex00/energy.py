@@ -2,9 +2,9 @@ from itertools import zip_longest
 
 def fix_wiring(cables, sockets, plugs):
     # Фильтруем нестроковые элементы входных итераторов
-    cables = filter(lambda x: isinstance(x, str), cables)
-    sockets = filter(lambda x: isinstance(x, str), sockets)
-    plugs = filter(lambda x: isinstance(x, str), plugs)
+    cables = filter(lambda x: isinstance(x, str) and x.startswith('cable'), cables)
+    sockets = filter(lambda x: isinstance(x, str) and x.startswith('socket'), sockets)
+    plugs = filter(lambda x: isinstance(x, str) and x.startswith('plug'), plugs)
     # Создаем список для результирующих строк
     result = []
     # Создаем кортежи со всеми вариантами
@@ -31,7 +31,7 @@ def main():
     print('-' * 20)
     plugs = ['plugZ', None, 'plugY', 'plugX']
     sockets = [1, 'socket1', 'socket2', 'socket3', 'socket4']
-    cables = ['cable2', 'cable1', False]
+    cables = ['cable2', 'cable1', False, 'sss']
 
     for c in fix_wiring(cables, sockets, plugs):
         print(c)
