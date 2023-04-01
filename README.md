@@ -10,7 +10,7 @@ Day02 - Class, dunder methods
 
 Day03 - BeautifulSoup
 
-Day04 -
+Day04 - map(), filter(), zip()
 
 Day05 -
 
