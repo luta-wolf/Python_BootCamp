@@ -14,3 +14,12 @@ class Key:
 
     def __gt__(self, other):
         return True if other <= 9000 else False
+
+
+# Тесты
+key = Key()
+assert len(key) == 1337
+assert key[404] == 3
+assert key > 9000
+assert key.passphrase == "zax2rulez"
+assert str(key) == "GeneralTsoKeycard"
