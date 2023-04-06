@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+
+{% block body %}
+<h1>Загружаем музыку</h1>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="text-danger alert alert-danger" >
+    {% for message in messages %}
+      {{ message }}
+    {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<form enctype="multipart/form-data" method="post" action="/upload">
+    <input type=file name="the_file">
+    <input type="submit" value="Загрузить файл">
+    <p></p>
+</form>
+
+    {% for item in list_singls %}
+    <p>{{ item }}</p>
+<audio controls>
+     <source src="/uploads/{{ item }}" type="audio/mp3">
+</audio>
+    {% endfor %}
+
+
+{% endblock %}

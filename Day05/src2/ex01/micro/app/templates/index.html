@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}
+<title>Home Page</title>
+{% endblock%}
+{% block content %}
+    <form action="/success" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" />
+      <input type="submit" value="Upload" />
+          {% for item in items %} <h1> {{ item }} </h1> {% endfor %}
+    </form>
+        {% for item in items %}
+        <div>
+            <audio controls autoplay id="{{ item }}">
+                <source src="/static/{{ item }}" type="audio/mp3">
+            </audio>
+            <button class="play {{ item }}" type="button">Play Audio</button>
+            <button class="pause {{ item }}" type="button">Pause Audio</button>
+        </div>
+        {% endfor %}
+<p>Click the buttons to play or pause the audio.</p>
+
+
+<script>
+const playButtons = document.querySelectorAll('.play');
+const pauseButtons = document.querySelectorAll('.pause');
+
+playButtons.forEach(item => {
+    item.addEventListener('click', (evt) => {
+        playAudio(evt.target.classList[1]);
+    })
+})
+
+pauseButtons.forEach(item => {
+    item.addEventListener('click', (evt) => {
+        pauseAudio(evt.target.classList[1]);
+    })
+})
+
+function playAudio(id) {
+    document.getElementById(id).play();
+}
+
+function pauseAudio(id) {
+    document.getElementById(id).pause();
+}
+</script>
+
+{% endblock %}
